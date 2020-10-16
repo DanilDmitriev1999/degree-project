@@ -133,7 +133,7 @@ def subword_tokenize(tokens, labels, tokenizer):
     return subwords, token_start_idxs, bert_labels
 
 
-def subword_tokenize_to_ids(tokens, labels, tokenize):
+def subword_tokenize_to_ids(tokens, labels, tokenizer):
     assert len(tokens) == len(labels)
     subwords, token_start_idxs, bert_labels = subword_tokenize(tokens, labels, tokenize)
     subword_ids, mask = convert_tokens_to_ids(subwords, tokenizer)
