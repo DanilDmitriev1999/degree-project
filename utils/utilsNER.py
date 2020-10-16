@@ -109,7 +109,7 @@ def convert_tokens_to_ids(tokens, pad=True):
     else:
         return ids
 
-def subword_tokenize(tokens, labels, tokenize):
+def subword_tokenize(tokens, labels, tokenizer):
     def flatten(list_of_lists):
         for list in list_of_lists:
             for item in list:
