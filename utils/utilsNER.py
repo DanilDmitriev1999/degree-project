@@ -96,7 +96,7 @@ class Read_data:
     def __getitem__(self, i):
         return self.sentence[i], self.label[i]
     
-def convert_tokens_to_ids(tokens, pad=True, tokenizer):
+def convert_tokens_to_ids(tokens, tokenizer, pad=True, ):
     max_len = 150
     token_ids = tokenizer.convert_tokens_to_ids(tokens)
     ids = torch.LongTensor([token_ids])
